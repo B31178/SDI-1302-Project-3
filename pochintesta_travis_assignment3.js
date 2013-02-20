@@ -6,81 +6,49 @@
 //  Global Variables
 
 //  Arrays
-/*Array of Objects*/ [euroBird, afroBird, naBird]
+/*Array of Objects*/ [carOne, carTwo, carThree]
 
 //  Functions
 
 /*Average*/
-var average = function (euro, afro, nA) {
-				var outcome = (euro * afro * nA) / 3;
-				return outcome;
-				}
+
 
 //  Objects
 
-var euroBird = {
-
-	"velocity": 14,
-	"span": 10,
-	"strength": .75
-
-	}
-	
-var afroBird = {
-
-	"velocity": 10,
-	"span": 12,
-	"strenth": 2
-	
-	}
-		
-var naBird = {
-
-	"velocity": 12,
-	"span": [12,13,14],
-	"strength": 1.5
-	
-	}
-	
-var hybridBird = {} /*incl mutator*/
-
-var ultimateBird = {} /*JSON*/
-
-var veloBirds = {
-
-	"euro": 14,
-	"afro": 10,
-	"nA": 12,
-	"average": function (euro, afro, nA) {
-				var outcome = (this.euro * this.afro * this.nA) / 3;
+var carOne = {
+	"gallons": 15,
+	"miles": 250,
+	"color": "black",
+	"average": function () {
+				var outcome = (this.gallons * this.miles) / 2;
 				return outcome;
 				}
 	
 	}
 
-var spanBirds = {
+var carTwo = { /*Contains Mutator*/
 
-	"euro": 10,
-	"afro": 12,
-	"nA": 12,
+	"gallons": 10,
+	"miles": 300,
+	"color": "red",
 	"average": function () {
-				var outcome = (this.euro * this.afro * this.nA) / 3;
+				var outcome = (this.gallons * this.miles) / 2;
 				return outcome;
 				},
 				
-	"incSpan": function (newSpan) {
-				this.span = newSpan;
+	"altColor": function (newColor) {
+				this.color = newColor;
 				}
 	
 	}
 
-var strengthBirds = {
+var carThree = {
 
-	"euro": .75,
-	"afro"; 2,
-	"nA": 1.5,
-	"average": function (euro, afro, nA) {
-				var outcome = (this.euro * this.afro * this.nA) / 3;
+	"gallons": .75,
+	"miles"; 2,
+	"color": 1.5,
+	"average": function () {
+				var outcome = (this.gallons * this.miles) / 2;
 				return outcome;
 				}
 	
