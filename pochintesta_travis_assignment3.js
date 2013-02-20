@@ -8,6 +8,30 @@
 //  Arrays
 
 //  Functions
+var amountMoney = function (thousand) { /*While Loop*/
+		
+		while (thousand < 15) {
+		console.log("Counting my money...");
+		thousand++;
+		}
+		console.log("I have $ " + thousand + ".");
+		return thousand;
+
+}
+
+var whichColor = function (color) {
+	for (var color = 0; color < carThree.color.length; color++) {
+       	 console.log("Choosing color...");
+    	}
+    	if (carThree.color.length < 3) {
+        	console.log(carThree.color.length + " colors are currently available.");
+    	} else {
+        	console.log("All colors are available.");
+    	}
+    	console.log(carThree.color[2] + " is the color I want.");
+    	return color;
+
+}
 
 //  Objects
 
@@ -20,7 +44,7 @@ var carOne = {
 				var outcome = (gallons * mpg); /*Math*/
 				return outcome;
 				}
-			};
+}
 
 
 var carTwo = { /*Contains Mutator*/
@@ -37,13 +61,13 @@ var carTwo = { /*Contains Mutator*/
 				this.color = newColor;
 				},
 				
-	if (this.color === "white") { /*Procedure*/
-			this.monochrome = true;
-			console.log("Yes!");
-		} else { 
-			this.monochrome = false;
-			console.log("No.");
-		},
+	"checkColor": if (this.color === "white") { /*Procedure*/
+					this.monochrome = true;
+					console.log("Yes!");
+				} else { 
+					this.monochrome = false;
+					console.log("No.");
+				},
 		
 }
 
@@ -56,7 +80,7 @@ var carThree = {
 				var outcome = (gallons * mpg); /*Math*/
 				return outcome;
 				}
-	}
+}
 	
 //  Main Code
 
@@ -76,3 +100,12 @@ console.log("I'm leaning towards purchasing the second car since it costs the le
 console.log("The problem is it only comes in " + carTwo.color + ".")
 console.log("Is this car available in white?");
 carTwo.altColor("white");
+
+console.log("Let me see how many thousands I have.");
+amountMoney(13);
+
+whichColor(3);
+
+
+
+
