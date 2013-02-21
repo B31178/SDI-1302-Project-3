@@ -4,10 +4,20 @@
 //	Objects & Properties
 
 //  Global Variables
+var buyVehicle = true;
 
 //  Arrays
+var vehicleType = ["car", "truck", "van"];
 
 //  Functions
+var whichType = function (gonnaBuy,type) {
+		if (gonnaBuy === true) {
+		console.log("I'm ready to buy a " + type + ".");
+		} else {
+		console.log("I think I'm gonna wait to decide.");
+		}
+}
+
 var amountMoney = function (thousand) { /*While Loop*/
 		
 		while (thousand < 15) {
@@ -59,17 +69,20 @@ var carTwo = { /*Contains Mutator*/
 				
 	"altColor": function(newColor) { /*Method Mutator*/
 				this.color = newColor;
+				console.log("Yes we have it in " + this.color + ".");
 				},
 				
-	"checkColor": if (this.color === "white") { /*Procedure*/
+	"checkColor": function() { /*Do I need this?*/
+				if (this.color === "white") /*Procedure*/
+				{
 					this.monochrome = true;
 					console.log("Yes!");
 				} else { 
 					this.monochrome = false;
 					console.log("No.");
-				},
-		
-}
+				}
+		}
+	}
 
 var carThree = {
 
@@ -80,9 +93,12 @@ var carThree = {
 				var outcome = (gallons * mpg); /*Math*/
 				return outcome;
 				}
-}
+	}
+	
 	
 //  Main Code
+
+whichType(buyVehicle, vehicleType[0]);
 
 console.log("I'm looking for an affordable monochromatic car that can go the furthest on 5 gallons of gas.");
 console.log("There are 3 models in particular that I've been considering.");
@@ -90,11 +106,11 @@ console.log("There are 3 models in particular that I've been considering.");
 console.log("The first car costs " + carOne.price + " and is " + carOne.color + ".");
 console.log("It can travel " + carOne.distance(5, 25) + " on 5 gallons of gas.");
 
-console.log("The second car costs " + carTwo.price + " and is " + carOne.color + ".");
-console.log("It can travel " + carOne.distance(5, 28) + " on 5 gallons of gas.");
+console.log("The second car costs " + carTwo.price + " and is " + carTwo.color + ".");
+console.log("It can travel " + carTwo.distance(5, 28) + " on 5 gallons of gas.");
 
-console.log("The third car costs " + carThree.price + " and is " + carOne.color + ".");
-console.log("It can travel " + carOne.distance(5, 30) + " on 5 gallons of gas.");
+console.log("The third car costs " + carThree.price + " and is " + carThree.color + ".");
+console.log("It can travel " + carThree.distance(5, 30) + " on 5 gallons of gas.");
 
 console.log("I'm leaning towards purchasing the second car since it costs the least and has decent gas mileage.");
 console.log("The problem is it only comes in " + carTwo.color + ".")
@@ -105,7 +121,3 @@ console.log("Let me see how many thousands I have.");
 amountMoney(13);
 
 whichColor(3);
-
-
-
-
