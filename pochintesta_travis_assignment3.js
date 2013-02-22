@@ -56,33 +56,23 @@ var jsonCars = {
     {
 
         "price": 15000,
-        /*Property Number*/
         "color": "black",
-        /*Property String*/
         "monoChrome": true,
-        /*Property Boolean*/
-
+        
     },
 
-    { /*Contains Mutator*/
-
+    {
         "price": 10000,
-        /*Property Number*/
         "color": "red",
-        /*Property Number*/
         "monoChrome": false,
-        /*Property Boolean*/
 
     },
 
     {
 
         "price": 12000,
-        /*Property Number*/
         "color": ["white", "gray", "black"],
-        /*Property Array of Strings*/
         "monoChrome": true,
-        /*Property Boolean*/
 
     }]
 }
@@ -93,13 +83,12 @@ var customize = {
     "options": {
 
 
-        "distance": function (gallons, mpg) { /*Method Function*/
-            var outcome = (gallons * mpg); /*Math*/
-            return outcome;
+        "distance": function (gallons, mpg) {
+            var outcome = (gallons * mpg);
 
         },
 
-        "altColor": function (newColor, color) { /*Method Mutator*/
+        "altColor": function (newColor, color) {
             color = newColor;
             console.log("Yes we also have it in " + color + ".");
 
