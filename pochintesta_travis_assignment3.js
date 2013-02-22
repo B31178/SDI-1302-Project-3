@@ -28,7 +28,7 @@ var amountMoney = function (thousand) {
         console.log("Counting my money...");
         thousand++;
     }
-    console.log("I have $ " + thousand + ".");
+    console.log("I have $" + thousand + " thousand.");
     return thousand;
 
 }
@@ -37,12 +37,12 @@ var whichColor = function (color) {
     for (var color = 0; color < jsonCars.cars[2].color.length; color++) {
         console.log("Choosing color...");
     }
-    if (jsonCars.cars[2].color.length < 3) {
+    if (jsonCars.cars[2].color.length > 0) {
         console.log(jsonCars.cars[2].color.length + " colors are currently available.");
     } else {
         console.log("All colors are available.");
     }
-    console.log(jsonCars.cars[2].color[2] + " is the color I want.");
+    console.log(jsonCars.cars[2].color[0] + " is the color I want.");
     return color;
 
 }
@@ -101,21 +101,9 @@ var customize = {
 
         "altColor": function (newColor, color) { /*Method Mutator*/
             color = newColor;
-            console.log("Yes we have it in " + jsonCars.cars[1].color + ".");
+            console.log("Yes we also have it in " + color + ".");
 
         },
-
-
-        "checkColor": function () { /*Do I need this?*/
-            if (this.color === "white"); /*Procedure*/
-            {
-                this.monochrome = true;
-                console.log("Yes!")
-            }
-            //} else { 
-            //	this.monochrome = false;
-            //	console.log("No.");
-        }
 
     }
 }
@@ -127,14 +115,14 @@ whichType(buyVehicle, vehicleType[0]);
 console.log("I'm looking for an affordable monochromatic car that can go the furthest on 5 gallons of gas.");
 console.log("There are 3 models in particular that I've been considering.");
 
-console.log("The first car costs " + jsonCars.cars[0].price + " and is " + jsonCars.cars[0].color + ".");
-console.log("It can travel " + customize.options.distance(5, 25) + " on 5 gallons of gas.");
+console.log("The first car costs $" + jsonCars.cars[0].price + " and is " + jsonCars.cars[0].color + ".");
+console.log("It can travel " + customize.options.distance(5, 25) + " miles on 5 gallons of gas.");
 
-console.log("The second car costs " + jsonCars.cars[1].price + " and is " + jsonCars.cars[1].color + ".");
-console.log("It can travel " + customize.options.distance(5, 28) + " on 5 gallons of gas.");
+console.log("The second car costs $" + jsonCars.cars[1].price + " and is " + jsonCars.cars[1].color + ".");
+console.log("It can travel " + customize.options.distance(5, 28) + " miles on 5 gallons of gas.");
 
-console.log("The third car costs " + jsonCars.cars[2].price + " and is " + jsonCars.cars[2].color + ".");
-console.log("It can travel " + customize.options.distance(5, 30) + " on 5 gallons of gas.");
+console.log("The third car costs $" + jsonCars.cars[2].price + " and is " + jsonCars.cars[2].color + ".");
+console.log("It can travel " + customize.options.distance(5, 30) + " miles on 5 gallons of gas.");
 
 console.log("I'm leaning towards purchasing the second car since it costs the least and has decent gas mileage.");
 console.log("The problem is it only comes in " + jsonCars.cars[2].color + ".")
